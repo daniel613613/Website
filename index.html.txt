@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Edits | Modern Video Editing Agency</title>
+    <!-- Google Fonts: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#0f0f11',
+                        darker: '#0a0a0b',
+                        primary: '#8b5cf6', // Purple
+                        secondary: '#ec4899', // Pink
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Gradient Text */
+        .text-gradient {
+            background: linear-gradient(to right, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Background Glow Orbs */
+        .glow-orb {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #8b5cf6;
+            filter: blur(100px);
+            opacity: 0.15;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-darker text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- Background Orbs -->
+    <div class="glow-orb top-[-10%] left-[-10%]"></div>
+    <div class="glow-orb top-[40%] right-[-5%] bg-secondary"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-darker/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 cursor-pointer">
+                    <a href="#" class="text-2xl font-black tracking-tighter">
+                        <i class="fa-solid fa-play text-primary mr-2"></i>LUMINA<span class="text-gradient">EDITS</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="text-gray-300 hover:text-white transition-colors font-medium">Home</a>
+                        <a href="#services" class="text-gray-300 hover:text-white transition-colors font-medium">Services</a>
+                        <a href="#work" class="text-gray-300 hover:text-white transition-colors font-medium">Our Work</a>
+                        <a href="#contact" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2.5 rounded-full font-semibold hover:opacity-90 transition-opacity transform hover:scale-105 duration-200 shadow-lg shadow-primary/30">
+                            Get a Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark border-b border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Home</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Services</a>
+                <a href="#work" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Our Work</a>
+                <a href="#contact" class="block px-3 py-2 mt-4 text-center text-base font-medium bg-gradient-to-r from-primary to-secondary text-white rounded-md">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-gray-700 bg-gray-900/50 backdrop-blur-sm">
+                <span class="text-sm font-medium text-gray-300">🔥 We have open spots for new clients this month</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 leading-tight">
+                Turn your raw footage into <br class="hidden md:block"/>
+                <span class="text-gradient">Viral Masterpieces.</span>
+            </h1>
+            <p class="mt-4 text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+                We are a premium video editing agency helping YouTubers, brands, and creators scale their audience through high-retention, cinematic storytelling.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#work" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-bold text-lg hover:shadow-[0_0_30px_-5px_rgba(139,92,246,0.6)] transition-all duration-300 transform hover:-translate-y-1">
+                    View Showreel <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-gray-600 text-white rounded-full font-bold text-lg hover:bg-gray-800 transition-all duration-300">
+                    Book a Call
+                </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-gray-800 pt-10">
+                <div>
+                    <h3 class="text-4xl font-black text-white">50M+</h3>
+                    <p class="text-gray-500 mt-1">Views Generated</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-black text-white">120+</h3>
+                    <p class="text-gray-500 mt-1">Happy Clients</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-black text-white">99%</h3>
+                    <p class="text-gray-500 mt-1">Retention Rate</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-black text-white">24h</h3>
+                    <p class="text-gray-500 mt-1">Turnaround Time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Our Expertise</h2>
+                <h3 class="text-3xl md:text-5xl font-bold">Services we offer</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl hover:border-primary/50 transition-colors duration-300 group">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <i class="fa-brands fa-youtube text-2xl text-primary"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">YouTube Long-form</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Documentaries, vlogs, and talking-head videos optimized for maximum watch time and audience retention.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl hover:border-secondary/50 transition-colors duration-300 group">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+                        <i class="fa-solid fa-mobile-screen text-2xl text-secondary"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">Short-form Content</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Engaging TikToks, Instagram Reels, and YouTube Shorts with dynamic captions, sound design, and b-roll.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl hover:border-primary/50 transition-colors duration-300 group">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <i class="fa-solid fa-film text-2xl text-primary"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">Commercial & Brand</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        High-end cinematic editing, color grading, and motion graphics for product launches and ad campaigns.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work" class="py-20 bg-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Featured Work</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold">Recent Projects</h3>
+                </div>
+                <a href="#" class="mt-4 md:mt-0 text-gray-400 hover:text-white transition-colors group">
+                    View all projects <i class="fa-solid fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Video thumbnail" class="w-full h-[300px] object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 flex items-center justify-center z-20">
+                        <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                            <i class="fa-solid fa-play text-white text-xl ml-1"></i>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6 z-20">
+                        <span class="bg-primary/80 text-white text-xs font-bold px-3 py-1 rounded-full uppercase mb-2 inline-block">Tech Review</span>
+                        <h4 class="text-2xl font-bold text-white">Future of AI Documentary</h4>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Video thumbnail" class="w-full h-[300px] object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 flex items-center justify-center z-20">
+                        <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-secondary transition-colors duration-300">
+                            <i class="fa-solid fa-play text-white text-xl ml-1"></i>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6 z-20">
+                        <span class="bg-secondary/80 text-white text-xs font-bold px-3 py-1 rounded-full uppercase mb-2 inline-block">Fitness Brand</span>
+                        <h4 class="text-2xl font-bold text-white">Nike Summer Campaign</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow/Why Us Section -->
+    <section class="py-20 bg-dark relative border-t border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Editing that keeps eyes glued to the screen.</h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        We don't just cut clips together. We build narratives, engineer soundscapes, and utilize psychology-based pacing to ensure your viewer retention graphs stay flat. 
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle-check text-primary mt-1.5 mr-3"></i>
+                            <span class="text-gray-300 font-medium">Dedicated editor assigned to your brand</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle-check text-primary mt-1.5 mr-3"></i>
+                            <span class="text-gray-300 font-medium">Unlimited revisions until it's perfect</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle-check text-primary mt-1.5 mr-3"></i>
+                            <span class="text-gray-300 font-medium">Access to premium stock footage & music</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Video Editing Setup" class="rounded-2xl shadow-2xl border border-gray-700">
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-gray-900 border border-gray-700 p-4 rounded-xl shadow-xl flex items-center space-x-4">
+                        <div class="bg-green-500/20 p-3 rounded-full">
+                            <i class="fa-solid fa-bolt text-green-500"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold">Premiere Pro & DaVinci</p>
+                            <p class="text-gray-400 text-sm">Industry standard tools</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section id="contact" class="py-24 relative">
+        <div class="glow-orb bottom-0 left-[30%] bg-secondary"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-black mb-6">Ready to upgrade your content?</h2>
+            <p class="text-xl text-gray-400 mb-10">Let's discuss your vision and see how our editing can help you scale.</p>
+            
+            <div class="bg-gray-900 border border-gray-800 p-8 rounded-3xl text-left shadow-2xl">
+                
+                <!-- UPDATED FORM WITH FORMSUBMIT HERE -->
+                <form action="https://formsubmit.co/starpulseinsider@gmail.com" method="POST" class="space-y-6">
+                    
+                    <!-- Optional: You can uncomment the line below to prevent spam captchas if you upgrade FormSubmit later -->
+                    <!-- <input type="hidden" name="_captcha" value="false"> -->
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                            <input type="text" name="name" required class="w-full bg-darker border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                            <input type="email" name="email" required class="w-full bg-darker border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Project Type</label>
+                        <select name="project_type" class="w-full bg-darker border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors appearance-none">
+                            <option value="YouTube Long-form">YouTube Long-form</option>
+                            <option value="Shorts / TikToks / Reels">Shorts / TikToks / Reels</option>
+                            <option value="Commercial / Ad">Commercial / Ad</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Tell us about your project</label>
+                        <textarea name="message" rows="4" required class="w-full bg-darker border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Link to your current channel, raw footage size, expected style..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white font-bold py-4 rounded-lg hover:opacity-90 transition-opacity cursor-pointer">
+                        Send Inquiry
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="text-2xl font-black tracking-tighter mb-4 block">
+                        <i class="fa-solid fa-play text-primary mr-2"></i>LUMINA<span class="text-gradient">EDITS</span>
+                    </a>
+                    <p class="text-gray-400 max-w-sm">Elevating brands and creators through high-retention, cinematic video editing.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary transition-all"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary transition-all"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#work" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fa-solid fa-envelope mr-2 text-primary"></i> starpulseinsider@gmail.com</li>
+                        <li><i class="fa-solid fa-location-dot mr-2 text-primary"></i> Online</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 Lumina Edits. All rights reserved.</p>
+                <div class="space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
